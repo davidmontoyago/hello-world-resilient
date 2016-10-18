@@ -11,6 +11,7 @@ public class QueueReadCommand extends HystrixCommand<String> {
 
     @Override
     protected String run() throws Exception {
+        Thread.sleep(100);
         return "Hello";
     }
 }
