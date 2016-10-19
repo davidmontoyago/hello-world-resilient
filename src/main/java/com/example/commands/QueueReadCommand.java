@@ -14,4 +14,9 @@ public class QueueReadCommand extends HystrixCommand<String> {
         Thread.sleep(100);
         return "Hello";
     }
+
+    @Override
+    protected String getFallback() {
+        return "[Fallback] Hello";
+    }
 }

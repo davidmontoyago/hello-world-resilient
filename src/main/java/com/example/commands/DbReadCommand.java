@@ -14,4 +14,9 @@ public class DbReadCommand extends HystrixCommand<String> {
         Thread.sleep(100);
         return "World!";
     }
+
+    @Override
+    protected String getFallback() {
+        return "[Fallback] World!";
+    }
 }
